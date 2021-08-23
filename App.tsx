@@ -6,6 +6,10 @@ import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 
+
+
+import VideoScreen from './screens/VideoScreen/VideoScreen';
+
 export default function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
@@ -15,7 +19,8 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
-        <Navigation colorScheme={'dark'} />
+        {/* <Navigation colorScheme={'dark'} /> */}
+        <VideoScreen />
         <StatusBar />
       </SafeAreaProvider>
     );
